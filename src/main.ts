@@ -57,20 +57,27 @@ import { toIcsEvent } from "./toIcsEvent";
             console.error("Failed",error);
             return;
           }
+          console.log("Ready to save to file. term: "+term.name+", course: "+course.name);
+          
           const outputFilename = "zjuphylab.ics";
           if(fs.existsSync(outputFilename)){
             return inquirer.prompt({
               type: "confirm",
               name: "overwrite",
               message: "File ["+ outputFilename+"] exists. Overwrite?",
+              default: true
             }).then((answers) => {
               if(answers.overwrite){
                 fs.writeFileSync(outputFilename, value);
+                console.log("File ["+ outputFilename+"] saved.");
+                
               }
             });
           }else{
             fs.writeFileSync(outputFilename, value);
+            console.log("File ["+ outputFilename+"] saved.");
           }
+
         }
         );
         
