@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "gen": "node src/main.js"
+    "gen": "node dist/main.js",
+    "build": "esbuild src/main.ts --outfile=dist/main.js --bundle --platform=node --target=es2020"
   },
   "repository": {
     "type": "git",
@@ -21,5 +22,8 @@
     "ics": "^3.8.1",
     "inquirer": "^12.4.2",
     "js-md5": "^0.8.3"
+  },
+  "devDependencies": {
+    "esbuild": "^0.25.0"
   }
 }
