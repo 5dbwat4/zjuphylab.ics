@@ -1,0 +1,25 @@
+{
+  "name": "zjuphylab.ics",
+  "version": "1.0.0",
+  "description": "将浙江大学物理实验课表转为iCalendar格式",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "gen": "node src/main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/5dbwat4/zjuphylab.ics.git"
+  },
+  "author": "5dbwat4",
+  "license": "LGPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/5dbwat4/zjuphylab.ics/issues"
+  },
+  "homepage": "https://github.com/5dbwat4/zjuphylab.ics#readme",
+  "dependencies": {
+    "ics": "^3.8.1",
+    "inquirer": "^12.4.2",
+    "js-md5": "^0.8.3"
+  }
+}
